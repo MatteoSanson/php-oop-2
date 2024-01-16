@@ -31,9 +31,9 @@
         include 'models/prodotto.php';
 
 
-        echo "<h2 class='mt-4'>".paginaCategoria()."</h2>";
-        echo "<h2 class='mt-4'>".paginaTipologia()."</h2>";
-        echo "<h2 class='mt-4'>".paginaProdotto()."</h2>";
+        echo "<div class='mt-4'>".paginaCategoria()."</div>";
+        echo "<div class='mt-4'>".paginaTipologia()."</div>";
+        echo "<div class='mt-4'>".paginaProdotto()."</div>";
         ?>
 
         </div>
