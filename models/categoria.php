@@ -18,8 +18,4 @@ class Categoria {
         }
     }
 }
-
-function paginaCategoria($categoria) {
-    return "Categoria: {$categoria->tipo}<br>Sconto: {$categoria->sconto}";
-}
 ?>

@@ -23,31 +23,34 @@
     <main>
         <div class="container">
 
-
         <?php
         include 'models/categoria.php';
         include 'models/tipologia.php';
         include 'models/prodotto.php';
 
-        // prova 1 
-        $categoria1 = new Categoria('Cane');
-        $tipologia1 = new Tipologia('Gioco');
-        echo "<div class='mt-4'>".paginaCategoria($categoria1)."</div>";
-        echo "<div class='mt-4'>".paginaTipologia($tipologia1)."</div><hr>";
-
-        // prova 2
-        $categoria2 = new Categoria('Gatto');
-        $tipologia2 = new Tipologia('Cibo');
-        echo "<div class='mt-4'>".paginaCategoria($categoria2)."</div>";
-        echo "<div class='mt-4'>".paginaTipologia($tipologia2)."</div><hr>";
-
-        // prova 3
-        $categoria3 = new Categoria('Roditore');
-        $tipologia3 = new Tipologia('Medicale');
-        echo "<div class='mt-4'>".paginaCategoria($categoria3)."</div>";
-        echo "<div class='mt-4'>".paginaTipologia($tipologia3)."</div><hr>";
-
+        $prodotti = [
+            new Prodotto('Pallina rimbalzina', 12.99, 'Cane', 'Gioco'),
+            new Prodotto('Croccantini Gourmet', 6.99, 'Gatto', 'Cibo'),
+            new Prodotto('Petmod Intestinal 60 Gr', 24.99, 'Roditore', 'Medicale'),
+        ];
         ?>
+
+        <div class="row">
+            <?php foreach ($prodotti as $prodotto): ?>
+                <div class="col-md-4">
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Nome: <?= $prodotto->nome ?></h5>
+                            <p class="card-text">Prezzo: <?= $prodotto->prezzo ?></p>
+                            <p class="card-text">Categoria: <?= $prodotto->tipo ?></p>
+                            <p class="card-text">Sconto Categoria: <?= $prodotto->sconto ?></p>
+                            <p class="card-text">Tipologia: <?= $prodotto->titolo ?></p>
+                            <p class="card-text">Sconto Tipologia: <?= $prodotto->scontoTipologia ?></p>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
 
         </div>
     </main>

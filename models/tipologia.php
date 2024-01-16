@@ -1,14 +1,11 @@
 <?php
-class Tipologia {
+class Tipologia extends Categoria {
     public $titolo;
-    public $sconto = "/";
+    public $scontoTipologia = "/";
 
-    function __construct($titolo) {
+    function __construct($tipo, $titolo) {
+        parent::__construct($tipo);
         $this->titolo = $titolo;
     }
-}
-
-function paginaTipologia($tipologia) {
-    return "Tipologia: {$tipologia->titolo}<br>Sconto: {$tipologia->sconto}";
 }
 ?>
