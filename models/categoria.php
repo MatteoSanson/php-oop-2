@@ -14,13 +14,12 @@ class Categoria {
         } elseif ($this->tipo === 'Gatto') {
             $this->sconto = '5%';
         } else {
-            $this->sconto = 0;
+            $this->sconto = '/';
         }
     }
 }
 
-function paginaCategoria() {
-    $categoria = new Categoria('Gatto');
+function paginaCategoria($categoria) {
     return "Categoria: {$categoria->tipo}<br>Sconto: {$categoria->sconto}";
 }
 ?>

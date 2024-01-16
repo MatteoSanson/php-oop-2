@@ -25,15 +25,28 @@
 
 
         <?php
-
         include 'models/categoria.php';
         include 'models/tipologia.php';
         include 'models/prodotto.php';
 
+        // prova 1 
+        $categoria1 = new Categoria('Cane');
+        $tipologia1 = new Tipologia('Gioco');
+        echo "<div class='mt-4'>".paginaCategoria($categoria1)."</div>";
+        echo "<div class='mt-4'>".paginaTipologia($tipologia1)."</div><hr>";
 
-        echo "<div class='mt-4'>".paginaCategoria()."</div>";
-        echo "<div class='mt-4'>".paginaTipologia()."</div>";
-        echo "<div class='mt-4'>".paginaProdotto()."</div>";
+        // prova 2
+        $categoria2 = new Categoria('Gatto');
+        $tipologia2 = new Tipologia('Cibo');
+        echo "<div class='mt-4'>".paginaCategoria($categoria2)."</div>";
+        echo "<div class='mt-4'>".paginaTipologia($tipologia2)."</div><hr>";
+
+        // prova 3
+        $categoria3 = new Categoria('Roditore');
+        $tipologia3 = new Tipologia('Medicale');
+        echo "<div class='mt-4'>".paginaCategoria($categoria3)."</div>";
+        echo "<div class='mt-4'>".paginaTipologia($tipologia3)."</div><hr>";
+
         ?>
 
         </div>
